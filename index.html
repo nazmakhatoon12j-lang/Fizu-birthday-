@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#140b2e">
+<title>For Fizu ✨ A Birthday Dream</title>
+<style>
+*{box-sizing:border-box} :root{--pink:#ff9ed5;--gold:#ffe7a1;--lav:#c7b7ff}
+body{margin:0;background:#100925;color:#fff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+#sky,#effects{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}#sky{z-index:0}#effects{z-index:8}
+.bg{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 15% 20%,#7c2e8c55,transparent 35%),radial-gradient(ellipse at 85% 22%,#255ca355,transparent 35%),linear-gradient(#100925,#24103c 55%,#080719);animation:bgmove 14s ease-in-out infinite alternate}
+@keyframes bgmove{to{filter:hue-rotate(18deg);transform:scale(1.04)}}
+.page{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px 14px}
+.shell{width:min(900px,100%);text-align:center;padding:clamp(22px,5vw,50px);border:1px solid #ffffff24;border-radius:32px;background:linear-gradient(145deg,#ffffff16,#ffffff07);box-shadow:0 25px 100px #0007;backdrop-filter:blur(13px);animation:enter 1.2s ease both}
+@keyframes enter{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+.kicker{display:inline-block;border:1px solid #ffffff36;border-radius:999px;padding:8px 14px;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#ffe5f5}
+h1{font-size:clamp(2.8rem,10vw,6.5rem);line-height:.99;margin:22px 0 16px;letter-spacing:-.06em;background:linear-gradient(100deg,#fff,#ffb9e4,#ffe9a4,#c7b7ff,#fff);background-size:300%;color:transparent;background-clip:text;-webkit-background-clip:text;animation:glitter 6s linear infinite}
+@keyframes glitter{to{background-position:300%}}
+.lead{max-width:620px;margin:0 auto;color:#eee3ff;line-height:1.75;font-size:clamp(1rem,2.7vw,1.18rem)}
+.stage{height:330px;position:relative;display:flex;align-items:center;justify-content:center;margin:8px auto 0}
+.halo{position:absolute;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,#ffb8ed33,transparent 68%);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.2);opacity:.6}}
+.moon{position:absolute;right:12%;top:22px;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff,#e9d8ff 48%,#8e7acc);box-shadow:0 0 45px #c5adff88}
+.moon:after{content:"";position:absolute;inset:8px;border:1px solid #ffffff80;border-radius:50%}
+.shooting{position:absolute;top:55px;left:15%;width:100px;height:2px;background:linear-gradient(90deg,#fff,transparent);transform:rotate(-30deg);animation:shoot 4s ease-in-out infinite}
+@keyframes shoot{0%,60%{opacity:0;transform:translate(0,0) rotate(-30deg)}65%{opacity:1}100%{opacity:0;transform:translate(100px,65px) rotate(-30deg)}}
+.cakeWrap{position:relative;margin-top:95px;filter:drop-shadow(0 20px 16px #0006);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.plate{position:absolute;width:310px;height:25px;left:50%;bottom:-16px;transform:translateX(-50%);border-radius:50%;background:linear-gradient(#ffe8ff,#b7a4ec 50%,#5d4d8b);box-shadow:0 8px 20px #0006}
+.tier{position:relative;margin:auto;border:3px solid #ffd6eb;box-shadow:inset 0 5px 0 #ffffff45,0 5px 10px #0002}
+.top{width:200px;height:45px;border-radius:50%;background:linear-gradient(90deg,#ffabd8,#fff0f7,#ff9dcd);z-index:3}
+.upper{width:200px;height:55px;margin-top:-22px;background:linear-gradient(90deg,#d95c9d,#ffadd6,#db63a2);border-radius:8px 8px 18px 18px;z-index:2}
+.lowerTop{width:275px;height:48px;margin-top:-10px;border-radius:50%;background:linear-gradient(90deg,#ffe7f4,#ffb9dc,#ffeaf5);z-index:2}
+.lower{width:275px;height:72px;margin-top:-22px;background:linear-gradient(90deg,#d96ca8,#ffadd6,#d45d9a);border-radius:8px 8px 22px 22px;z-index:1}
+.drips{position:absolute;top:25px;left:0;right:0;height:29px;display:flex;justify-content:space-around;z-index:4;pointer-events:none}
+.drips i{display:block;width:13px;height:20px;border-radius:0 0 10px 10px;background:#fff0f8;box-shadow:inset -3px 0 #ffd1e9}
+.drips i:nth-child(2n){height:27px}.drips i:nth-child(3n){height:15px}
+.berries{position:absolute;top:-6px;left:8px;right:8px;display:flex;justify-content:space-around;z-index:5;font-size:19px;filter:drop-shadow(0 2px 2px #a42b64)}
+.candles{position:absolute;top:-73px;left:0;right:0;display:flex;justify-content:center;gap:9px;z-index:6}
+.candle{width:9px;height:48px;border-radius:4px;background:repeating-linear-gradient(135deg,#fff 0 6px,#8f83ff 6px 12px);position:relative;box-shadow:0 0 4px #fff6}
+.candle:nth-child(2n){background:repeating-linear-gradient(135deg,#fff 0 6px,#ff70b8 6px 12px)}
+.flame{position:absolute;top:-24px;left:-4px;width:17px;height:24px;border-radius:50% 50% 45% 45%;background:radial-gradient(ellipse at 50% 70%,#fff 0 12%,#fff3a1 27%,#ff9b32 65%,transparent 72%);filter:drop-shadow(0 0 9px #ffb23f);transform-origin:50% 100%;animation:flicker .6s ease-in-out infinite alternate}
+@keyframes flicker{to{transform:rotate(8deg) scale(.85)}}
+.cakeWrap.blown .flame{opacity:0;transform:scale(.1) translateY(12px)}
+.cakeWrap.blown .candle:after{content:"〰";position:absolute;top:-23px;left:-6px;color:#ddd;animation:smoke 1.5s forwards}
+@keyframes smoke{to{transform:translate(-8px,-25px) scale(1.6);opacity:0}}
+.decor{position:absolute;bottom:15px;font-size:clamp(1.7rem,5vw,3rem);animation:sway 3s ease-in-out infinite}
+.decor.left{left:5%}.decor.right{right:5%;animation-delay:-1.4s}
+@keyframes sway{50%{transform:translateY(-10px) rotate(6deg)}}
+.controls{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:15px auto 0}
+button{font:inherit;font-weight:750;cursor:pointer;border-radius:999px;padding:13px 18px;color:#24143a;background:linear-gradient(110deg,#ffe6a1,#ff9ed5);border:1px solid #ffffff70;box-shadow:0 7px 24px #ff8aca24;transition:transform .2s,filter .2s}
+button:hover{transform:translateY(-3px);filter:brightness(1.08)}button:active{transform:scale(.97)}
+button.alt{color:#fff;background:#ffffff10;border:1px solid #ffffff45;box-shadow:none}
+.music-state{font-size:.8rem;color:#cfc1eb;margin:10px 0 0;min-height:1.2em}
+.hiddenMsg{max-height:0;overflow:hidden;opacity:0;transition:max-height 1s ease,opacity .8s ease,margin .8s ease}
+.hiddenMsg.open{max-height:450px;opacity:1;margin-top:22px}
+.letter{max-width:650px;margin:auto;padding:24px;border-radius:22px;background:#ffffff0c;border:1px solid #ffffff28;line-height:1.85;color:#fff1fa}
+.letter h2{margin:0 0 12px;color:#ffe5a4;font-size:1.8rem}
+.sign{color:#ffb5df;font-size:1.08rem}
+footer{margin-top:25px;color:#cfc1e7;font-size:.8rem}
+.float{position:fixed;bottom:-35px;z-index:3;pointer-events:none;animation:rise linear forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@media(max-width:500px){.stage{height:300px;transform:scale(.92);margin-left:-8px;margin-right:-8px}.moon{right:6%}.cakeWrap{transform:scale(.88);margin-top:92px}.decor.left{left:0}.decor.right{right:0}.shell{border-radius:25px}.plate{width:285px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<canvas id="sky"></canvas><div class="bg"></div><canvas id="effects"></canvas>
+<div class="page"><main class="shell">
+<div class="kicker">a tiny birthday universe, just for you ✦</div>
+<h1>Happy Birthday<br>Fizu! 💗</h1>
+<p class="lead">A little magic, a sky full of stars, and a whole lot of wishes for someone truly special. May your day sparkle in every possible way. ✨</p>
+<div class="stage">
+<div class="halo"></div><div class="moon"></div><div class="shooting"></div>
+<div class="decor left">🎁</div><div class="decor right">🧸</div>
+<div class="cakeWrap" id="cake">
+<div class="plate"></div>
+<div class="candles" id="candles"></div>
+<div class="tier top"><div class="berries">🍓 🌸 🍓 🌸 🍓</div></div>
+<div class="tier upper"><div class="drips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="tier lowerTop"></div>
+<div class="tier lower"><div class="drips"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+</div>
+</div>
+<p class="lead" id="wishLine">Make a wish, birthday star. Then blow out all 12 candles! 🕯️</p>
+<div class="controls">
+<button id="musicBtn">🎵 Play birthday music</button>
+<button id="blowBtn">🌬️ Blow out candles</button>
+<button class="alt" id="giftBtn">🎁 Open your gift</button>
+<button class="alt" id="wishBtn">🌠 Make a wish</button>
+</div>
+<div class="music-state" id="musicState">Music is off until you choose to play it. 🎶</div>
+<section class="hiddenMsg" id="message"><div class="letter">
+<h2>A little note for you, Fizu 💖</h2>
+<p>Happy Birthday, Fizu! 🥳❤️</p>
+<p>I'm really glad to have you as a friend. Keep smiling, keep shining, and never stop being your wonderful self! 💖✨</p>
+<p>May your new year bring you beautiful surprises, peaceful days, big dreams, and little moments that make you happy. You deserve so many good things!</p>
+<p class="sign">Keep shining, birthday star. 🌙💫</p>
+</div></section>
+<footer>Made with 💖, stardust, and lots of good wishes.</footer>
+</main></div>
+<script>
+(()=> {
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const candleHolder=document.getElementById('candles');
+for(let i=0;i<12;i++){const c=document.createElement('div');c.className='candle';const f=document.createElement('div');f.className='flame';c.appendChild(f);candleHolder.appendChild(c)}
+const sky=document.getElementById('sky'),sctx=sky.getContext('2d'),fx=document.getElementById('effects'),ctx=fx.getContext('2d');
+let W=0,H=0,stars=[],particles=[],rockets=[],audio=null,musicTimer=null,musicOn=false,blown=false;
+function resize(){W=innerWidth;H=innerHeight;for(const c of [sky,fx]){c.width=Math.floor(W*devicePixelRatio);c.height=Math.floor(H*devicePixelRatio);c.style.width=W+'px';c.style.height=H+'px';c.getContext('2d').setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}stars=Array.from({length:Math.min(190,Math.floor(W*H/6000))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.3,p:Math.random()*6.28,s:Math.random()*.02+.004}))}
+addEventListener('resize',resize);resize();
+function starFrame(){sctx.clearRect(0,0,W,H);for(const a of stars){a.p+=a.s;sctx.globalAlpha=.25+.7*Math.abs(Math.sin(a.p));sctx.fillStyle='#fff';sctx.beginPath();sctx.arc(a.x,a.y,a.r,0,Math.PI*2);sctx.fill()}sctx.globalAlpha=1;if(!reduce)requestAnimationFrame(starFrame)}starFrame();
+function burst(x,y,n=75){for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,sp=Math.random()*5+1;particles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:65,max:65,size:Math.random()*3+1,h:Math.random()*360})}}
+function launch(){rockets.push({x:W*(.15+Math.random()*.7),y:H+8,vx:(Math.random()-.5)*2,vy:-(Math.random()*4+7),target:H*(.15+Math.random()*.35),h:Math.random()*360})}
+function fxFrame(){ctx.clearRect(0,0,W,H);if(!reduce&&Math.random()<.014)launch();for(let i=rockets.length-1;i>=0;i--){let r=rockets[i];r.x+=r.vx;r.y+=r.vy;r.vy+=.04;ctx.fillStyle=`hsl(${r.h} 100% 75%)`;ctx.beginPath();ctx.arc(r.x,r.y,2,0,7);ctx.fill();if(r.y<r.target||r.vy>0){burst(r.x,r.y,55);rockets.splice(i,1)}}for(let i=particles.length-1;i>=0;i--){let p=particles[i];p.x+=p.vx;p.y+=p.vy;p.vx*=.985;p.vy=p.vy*.985+.045;p.life--;ctx.globalAlpha=Math.max(0,p.life/p.max);ctx.fillStyle=`hsl(${p.h} 100% 70%)`;ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,7);ctx.fill();if(p.life<=0)particles.splice(i,1)}ctx.globalAlpha=1;if(!reduce)requestAnimationFrame(fxFrame)}fxFrame();
+function floaties(n=18){const icons=['💖','✨','💗','🌟','💕','🎉','🌸'];for(let i=0;i<n;i++){const e=document.createElement('span');e.className='float';e.textContent=icons[Math.random()*icons.length|0];e.style.left=Math.random()*100+'vw';e.style.fontSize=15+Math.random()*25+'px';e.style.animationDuration=4+Math.random()*4+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),8500)}}
+const melody=[[523,.24],[523,.24],[587,.48],[523,.48],[698,.48],[659,.8],[523,.24],[523,.24],[587,.48],[523,.48],[784,.48],[698,.8],[523,.24],[523,.24],[1047,.48],[880,.48],[698,.48],[659,.48],[587,.8],[932,.24],[932,.24],[880,.48],[698,.48],[784,.48],[698,.9]];
+function note(freq,dur,t){if(!audio)return;const o=audio.createOscillator(),g=audio.createGain();o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.075,t+.025);g.gain.setValueAtTime(.06,t+dur*.7);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(audio.destination);o.start(t);o.stop(t+dur+.03)}
+function startMusic(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){document.getElementById('musicState').textContent='Audio is not supported in this browser.';return}audio=audio||new AC();audio.resume();musicOn=true;document.getElementById('musicBtn').textContent='⏸ Pause music';document.getElementById('musicState').textContent='Birthday melody is playing 🎶';function phrase(){if(!musicOn)return;let t=audio.currentTime+.05;for(const [f,d] of melody){note(f,d,t);t+=d+.045}musicTimer=setTimeout(phrase,(t-audio.currentTime)*1000+300)}phrase()}
+function stopMusic(){musicOn=false;clearTimeout(musicTimer);document.getElementById('musicBtn').textContent='🎵 Play birthday music';document.getElementById('musicState').textContent='Music is paused. Tap Play whenever you like. 🎶'}
+document.getElementById('musicBtn').addEventListener('click',()=>musicOn?stopMusic():startMusic());
+document.getElementById('blowBtn').addEventListener('click',()=>{if(blown){document.getElementById('wishLine').textContent='Your birthday wish is on its way to the stars! 🌠';return}blown=true;document.getElementById('cake').classList.add('blown');document.getElementById('wishLine').textContent='All 12 candles are out! Your wish is off to the stars! 🌠💖';document.getElementById('blowBtn').textContent='✨ Wish sent!';floaties(35);burst(W/2,H*.42,150);for(let i=0;i<6;i++)setTimeout(launch,i*180);setTimeout(()=>burst(W*.25,H*.32,70),400);setTimeout(()=>burst(W*.75,H*.32,70),700);if(!musicOn)startMusic()});
+document.getElementById('giftBtn').addEventListener('click',()=>{document.getElementById('message').classList.add('open');floaties(30);burst(W/2,H*.36,110);setTimeout(()=>burst(W*.28,H*.3,60),350);setTimeout(()=>burst(W*.72,H*.3,60),650)});
+document.getElementById('wishBtn').addEventListener('click',()=>{floaties(24);burst(W/2,H*.38,90);document.getElementById('wishLine').textContent='Wish sent into the universe, birthday star! ✨💗'});
+setTimeout(()=>{if(!reduce){launch();floaties(5)}},1000);
+})();
+</script>
+</body></html>
